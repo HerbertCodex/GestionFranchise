@@ -1,4 +1,4 @@
-package ci.miage.controler;
+package ci.miage.controller;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -12,11 +12,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SplashControler implements Initializable {
+public class LoginController implements Initializable {
 
     private AnchorPane borderPane;
     @FXML
-    private AnchorPane apane;
+    private AnchorPane pane;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         splash();
@@ -38,7 +38,7 @@ public class SplashControler implements Initializable {
                                stageLogin.setTitle("Login");
                                stageLogin.setScene(sceneLogin);
                                stageLogin.show();
-                               apane.getScene().getWindow().hide();
+                               pane.getScene().getWindow().hide();
                            } catch (IOException e) {
                                e.printStackTrace();
                            }
