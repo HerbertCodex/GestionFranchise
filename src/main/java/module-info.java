@@ -1,4 +1,4 @@
-module ci.miage.gestionfranchise {
+module ci.miage {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,6 +10,8 @@ module ci.miage.gestionfranchise {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens ci.miage.gestionfranchise to javafx.fxml;
-    exports ci.miage.gestionfranchise;
+    opens ci.miage.vue to javafx.fxml;
+    opens ci.miage.controler to javafx.fxml;
+    exports ci.miage;
+    exports ci.miage.controler;
 }

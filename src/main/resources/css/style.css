@@ -1,0 +1,6 @@
+.back{
+    -fx-background-color: linear-gradient(to right top, #3786bd, #2a6da3, #1c5588, #0e3e6e, #002855);
+}
+.label{
+    -fx-font-family: Suruma;
+}
