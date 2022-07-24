@@ -1,17 +1,14 @@
 package ci.miage.controller;
 
-import ci.miage.utilitaires;
+import ci.miage.utilis.utilitaires;
 import io.github.palexdev.materialfx.controls.MFXButton;
-import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;

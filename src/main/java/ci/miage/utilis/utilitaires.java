@@ -1,4 +1,4 @@
-package ci.miage;
+package ci.miage.utilis;
 
 public class utilitaires {
     public static String urlitemsscreen = "/ci/miage/vue/itemsscreen.fxml";

@@ -1,6 +1,6 @@
 package ci.miage.controller;
 
-import ci.miage.utilitaires;
+import ci.miage.utilis.utilitaires;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
