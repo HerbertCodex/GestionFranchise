@@ -1,53 +1,42 @@
 package ci.miage.controller;
 
-import javafx.application.Platform;
+import ci.miage.utilitaires;
+import io.github.palexdev.materialfx.controls.MFXButton;
+import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
-
-    private AnchorPane borderPane;
+    private Parent fxml;
     @FXML
-    private AnchorPane pane;
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        splash();
+    private MFXButton btnadmin;
+    @FXML
+    void openAdminscreen(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btnadmin.getScene().getWindow();
+        stage.close();
+        Stage adminStage = new Stage();
+        fxml = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(utilitaires.urlloginAdminscreen)));
+        adminStage.setResizable(false);
+        Scene adminScenne = new Scene(fxml);
+        adminStage.setScene(adminScenne);
+        adminStage.setTitle("LoginAdmin");
+        adminStage.show();
     }
 
-    private void splash(){
-       new Thread(new Runnable() {
-           @Override
-           public void run() {
-               try {
-                   Thread.sleep(4000);
-                   Platform.runLater(new Runnable() {
-                       @Override
-                       public void run() {
-                           try {
-                               borderPane = FXMLLoader.load(getClass().getResource("/ci/miage/vue/loginscreen.fxml"));
-                               Stage stageLogin = new Stage();
-                               Scene sceneLogin = new Scene(borderPane);
-                               stageLogin.setTitle("Login");
-                               stageLogin.setScene(sceneLogin);
-                               stageLogin.show();
-                               pane.getScene().getWindow().hide();
-                           } catch (IOException e) {
-                               e.printStackTrace();
-                           }
-                       }
-                   });
-               } catch (InterruptedException e) {
-                   e.printStackTrace();
-               }
-           }
-       }).start();
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }

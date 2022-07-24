@@ -4,13 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="">
+    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="correction des fichiers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/DashboardControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeaccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/SplashController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/loginAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/utilitaires.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/adminscreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/itemsscreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeaccountscreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginAdminscreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/ajouter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/liste-des-accompagnateurs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controler/LoginControler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controler/SplashControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginscreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/splashscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/splashscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,30 +66,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/master/Bureau/GestionFranchise",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hduser/Documents/projet/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/src.zip&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ci.miage.gestionfranchises" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/ci/miage/controller" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue/css" />
       <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue/ci.miage.css" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GestionFranchise">
     <configuration name="GestionFranchise" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ci.miage.main" />
       <module name="GestionFranchise" />
@@ -80,6 +106,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GestionFranchiseSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="GestionFranchiseS" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ci.miage.gestionfranchises.GestionFranchiseSApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.GestionFranchise" />
+      <item itemvalue="Spring Boot.GestionFranchiseSApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -102,6 +140,16 @@
       <workItem from="1658156097244" duration="12743000" />
       <workItem from="1658175117974" duration="6910000" />
       <workItem from="1658215994207" duration="850000" />
+      <workItem from="1658216903339" duration="1301000" />
+      <workItem from="1658416684443" duration="401000" />
+      <workItem from="1658417106523" duration="520000" />
+      <workItem from="1658420257309" duration="611000" />
+      <workItem from="1658443061047" duration="151000" />
+      <workItem from="1658481143584" duration="10194000" />
+      <workItem from="1658519898874" duration="5226000" />
+      <workItem from="1658569906468" duration="1059000" />
+      <workItem from="1658602761249" duration="6022000" />
+      <workItem from="1658621298215" duration="18043000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1657900866982</created>
@@ -117,16 +165,36 @@
       <option name="project" value="LOCAL" />
       <updated>1658212859014</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="correction des fichiers">
+      <created>1658217084739</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658217084739</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="test" />
     <MESSAGE value="mise en place de l'animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en place de l'animation" />
+    <MESSAGE value="correction des fichiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction des fichiers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

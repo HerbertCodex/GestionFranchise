@@ -9,6 +9,7 @@ module ci.miage {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires MaterialFX;
 
     opens ci.miage.vue to javafx.fxml;
     opens ci.miage.controller to javafx.fxml;

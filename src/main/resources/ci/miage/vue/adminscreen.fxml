@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.AdminController">
+   <children>
+      <Pane prefHeight="150.0" prefWidth="1300.0" style="-fx-background-color: #3786bd;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="212.0" layoutY="75.0" text="SARL INTERSU+" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="333.0" layoutY="111.0" text="Depuis 2022" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="50.0" layoutY="70.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/1.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </Pane>
+      <VBox layoutY="150.0" prefHeight="651.0" prefWidth="288.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="225.0">
+         <children>
+            <Label prefHeight="50.0" prefWidth="288.0" text="COMPTES RESPONSABLES">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Label>
+            <MFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onMouseClicked="#account" prefHeight="50.0" prefWidth="288.0" text="Création de compte">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/ajouter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </MFXButton>
+            <MFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onMouseClicked="#listeaccount" prefHeight="50.0" prefWidth="288.0" text="Liste des comptes">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/liste-des-accompagnateurs.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </MFXButton>
+            <MFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="50.0" prefWidth="288.0" text="Button">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/ajouter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </MFXButton>
+            <Label prefHeight="50.0" prefWidth="288.0" text="ENTREPRISE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="pnl" layoutX="288.0" layoutY="220.0" prefHeight="575.0" prefWidth="1009.0" />
+   </children>
+</AnchorPane>
