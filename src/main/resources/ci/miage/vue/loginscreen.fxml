@@ -40,7 +40,7 @@
                   <Font name="System Bold Italic" size="45.0" />
                </font>
             </Label>
-            <MFXButton fx:id="btnadmin" buttonType="RAISED" layoutX="479.0" layoutY="757.0" onAction="#openAdminscreen" style="-fx-background-color: red;" text="ADMIN" textFill="WHITE">
+            <MFXButton fx:id="btnadmin" buttonType="RAISED" layoutX="469.0" layoutY="757.0" onAction="#openAdminscreen" prefHeight="32.0" prefWidth="68.0" style="-fx-background-color: red;" text="ADMIN" textFill="WHITE">
                <font>
                   <Font name="Abyssinica SIL" size="13.0" />
                </font>

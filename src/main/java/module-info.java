@@ -11,10 +11,12 @@ module ci.miage {
     requires eu.hansolo.tilesfx;
     requires MaterialFX;
     requires java.sql;
+    requires mysql.connector.java;
 
     opens ci.miage.vue to javafx.fxml;
     opens ci.miage.controller to javafx.fxml;
     exports ci.miage;
     exports ci.miage.controller;
     exports ci.miage.utilis;
+    exports ci.miage.modele;
 }

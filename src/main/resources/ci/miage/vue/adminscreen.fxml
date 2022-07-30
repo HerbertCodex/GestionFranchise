@@ -11,16 +11,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.AdminController">
+<AnchorPane fx:id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.AdminController">
    <children>
       <Pane prefHeight="150.0" prefWidth="1300.0" style="-fx-background-color: #3786bd;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="212.0" layoutY="75.0" text="SARL INTERSU+" textFill="WHITE">
+            <Label layoutX="212.0" layoutY="75.0" text="StartV" textFill="WHITE">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
-            <Label layoutX="333.0" layoutY="111.0" text="Depuis 2022" textFill="WHITE">
+            <Label layoutX="211.0" layoutY="111.0" text="Depuis 2022" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

@@ -3,6 +3,7 @@
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXComboBox?>
 <?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -11,7 +12,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="534.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.ItemsController">
    <children>
@@ -26,17 +26,17 @@
       </Pane>
       <HBox layoutY="50.0" prefHeight="50.0" prefWidth="800.0">
          <children>
-            <MFXTextField floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="nom" style="-fx-border-color: #3786bd;">
+            <MFXTextField fx:id="btnnom" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="nom" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
             </MFXTextField>
-            <MFXTextField floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="prenom" style="-fx-border-color: #3786bd;">
+            <MFXTextField fx:id="btnprenom" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="prenom" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
             </MFXTextField>
-            <MFXTextField floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="email" style="-fx-border-color: #3786bd;">
+            <MFXTextField fx:id="btnemail" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="email" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
@@ -45,17 +45,17 @@
       </HBox>
       <HBox layoutY="125.0" prefHeight="50.0" prefWidth="800.0">
          <children>
-            <MFXTextField floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="adresse" style="-fx-border-color: #3786bd;">
+            <MFXTextField fx:id="btnadresse" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="adresse" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
             </MFXTextField>
-            <MFXTextField floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="telephone" style="-fx-border-color: #3786bd;">
+            <MFXTextField fx:id="btntelephone" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="telephone" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
             </MFXTextField>
-            <MFXDatePicker floatMode="BORDER" promptText="Date Naissance" style="-fx-border-color: #3786bd;">
+            <MFXDatePicker fx:id="btndatenaissance" floatMode="BORDER" promptText="Date Naissance" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
@@ -64,24 +64,24 @@
       </HBox>
       <HBox layoutY="200.0" prefHeight="50.0" prefWidth="800.0">
          <children>
-            <MFXTextField floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="adresse" style="-fx-border-color: #3786bd;">
+            <MFXPasswordField fx:id="btnpassword" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="mot de passe" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
-            </MFXTextField>
-            <MFXComboBox floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="Service" style="-fx-border-color: #3786bd;">
+            </MFXPasswordField>
+            <MFXComboBox fx:id="btnservice" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="Service" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
             </MFXComboBox>
-            <MFXTextField floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="lieu de naissance" style="-fx-border-color: #3786bd;">
+            <MFXTextField fx:id="btnlieunaissance" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="lieu de naissance" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
             </MFXTextField>
          </children>
       </HBox>
-      <MFXButton buttonType="RAISED" layoutX="328.0" layoutY="278.0" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: green;" text="Valider" textFill="WHITE">
+      <MFXButton fx:id="btnvalide" buttonType="RAISED" layoutX="328.0" layoutY="278.0" onMouseClicked="#valide" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: green;" text="AJOUTER" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

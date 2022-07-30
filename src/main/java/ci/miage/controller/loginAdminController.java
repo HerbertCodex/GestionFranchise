@@ -58,7 +58,9 @@ public class loginAdminController implements Initializable {
                         fxml = FXMLLoader.load(getClass().getResource(utilitaires.urladminscreen));
                         Scene sceneA = new Scene(fxml);
                         stageA.setScene(sceneA);
+                        stageA.setResizable(false);
                         stageA.show();
+                        stageA.centerOnScreen();
                     } catch (IOException e){
                         e.printStackTrace();
                 }

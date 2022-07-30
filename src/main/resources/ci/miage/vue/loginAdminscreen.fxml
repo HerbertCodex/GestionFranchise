@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.loginAdminController" fx:id="adminpane">
+<AnchorPane fx:id="adminpane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.loginAdminController">
    <children>
       <Pane prefHeight="500.0" prefWidth="328.0" style="-fx-background-color: #3786bd;">
          <children>
@@ -27,8 +27,8 @@
       </Pane>
       <Pane layoutX="326.0" prefHeight="500.0" prefWidth="474.0" style="-fx-background-color: white;">
          <children>
-            <MFXTextField fx:id="txt_email" floatMode="BORDER" layoutX="87.0" layoutY="155.0" prefHeight="50.0" prefWidth="300.0" promptText="email" style="-fx-border-color: #3786bd;" />
-            <MFXPasswordField fx:id="txx_password" floatMode="BORDER" layoutX="87.0" layoutY="250.0" prefHeight="50.0" prefWidth="300.0" promptText="password" style="-fx-border-color: #3786bd;" />
+            <MFXTextField fx:id="txt_email" floatMode="BORDER" layoutX="87.0" layoutY="155.0" prefHeight="50.0" prefWidth="300.0" promptText="email" style="-fx-border-color: #3786bd;" text="admin@gmail.com" />
+            <MFXPasswordField fx:id="txx_password" floatMode="BORDER" layoutX="87.0" layoutY="250.0" prefHeight="50.0" prefWidth="300.0" promptText="password" style="-fx-border-color: #3786bd;" text="admin" />
             <MFXButton fx:id="btn_connection" buttonType="RAISED" layoutX="87.0" layoutY="342.0" onMouseClicked="#openHome" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #3786bd;" text="CONNEXION" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />

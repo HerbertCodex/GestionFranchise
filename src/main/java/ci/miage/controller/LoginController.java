@@ -30,6 +30,7 @@ public class LoginController implements Initializable {
         adminStage.setScene(adminScenne);
         adminStage.setTitle("LoginAdmin");
         adminStage.show();
+        adminStage.centerOnScreen();
     }
 
     @Override
