@@ -1,5 +1,6 @@
 package ci.miage.controller;
 
+import ci.miage.modele.Responsable;
 import ci.miage.utilis.ConnectionMysql;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
@@ -7,10 +8,15 @@ import io.github.palexdev.materialfx.controls.MFXDatePicker;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -27,9 +33,6 @@ public class ItemsController implements Initializable {
     private MFXTextField btnadresse;
 
     @FXML
-    private MFXDatePicker btndatenaissance;
-
-    @FXML
     private MFXTextField btnemail;
 
     @FXML
@@ -44,20 +47,76 @@ public class ItemsController implements Initializable {
     @FXML
     private MFXComboBox<String> btnservice;
     public ObservableList<String> data = FXCollections.observableArrayList();
+    public ObservableList<Responsable> datatest = FXCollections.observableArrayList();
     @FXML
     private MFXTextField btntelephone;
 
     @FXML
-    private MFXButton btnvalide;
-    @FXML
     private MFXTextField btnpassword;
 
+    @FXML
+    private TableColumn<Responsable, String> colADRESSE;
+
+    @FXML
+    private TableColumn<Responsable, String> colEMAIL;
+
+    @FXML
+    private TableColumn<Responsable, Integer> colID;
+
+    @FXML
+    private TableColumn<Responsable, String> colNOM;
+
+    @FXML
+    private TableColumn<Responsable, String> colPRENOM;
+
+    @FXML
+    private TableColumn<Responsable, String> colSERVICE;
+
+    @FXML
+    private TableColumn<Responsable, String> colTELEPHONE;
+    @FXML
+    private TableView<Responsable> tableAccountMod;
+
+    @FXML
+    void modification(ActionEvent event) {
+
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         connection = ConnectionMysql.connectionDB();
         remplir();
+        show();
     }
+    public void show(){
+        String sql = "select * from responsable";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                Responsable responsable = new Responsable();
+                responsable.setIdR(resultSet.getInt("idR"));
+                responsable.setNom(resultSet.getString("nom"));
+                responsable.setPrenom(resultSet.getString("prenom"));
+                responsable.setEmail(resultSet.getString("email"));
+                responsable.setAdresse(resultSet.getString("adresse"));
+                responsable.setTelephone(resultSet.getString("telephone"));
+                responsable.setService(resultSet.getString("service"));
+                datatest.add(responsable);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        colID.setCellValueFactory(new PropertyValueFactory<Responsable,Integer>("idR"));
+        colNOM.setCellValueFactory(new PropertyValueFactory<Responsable, String>("nom"));
+        colPRENOM.setCellValueFactory(new PropertyValueFactory<Responsable, String>("prenom"));
+        colEMAIL.setCellValueFactory(new PropertyValueFactory<Responsable, String>("email"));
+        colADRESSE.setCellValueFactory(new PropertyValueFactory<Responsable, String>("adresse"));
+        colTELEPHONE.setCellValueFactory(new PropertyValueFactory<Responsable, String>("telephone"));
+        colSERVICE.setCellValueFactory(new PropertyValueFactory<Responsable, String>("service"));
+        tableAccountMod.setItems(datatest);
+    }
+
     @FXML
     public void valide() {
 
@@ -96,6 +155,25 @@ public class ItemsController implements Initializable {
 
 
 
+   /* public void table(){
+        String sql = "SELECT nom, prenom, email, adresse, telephone, service FROM responsable";
+        ObservableList<Responsable> dataRespo = FXCollections.observableArrayList();
+        try {
+            preparedStatement = connection.prepareStatement("sql");
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                Responsable responsable = new Responsable();
+                responsable.setNom(resultSet.getString("nom"));
+                dataRespo.add(responsable);
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        tableAccountMod.setItems(dataRespo);
+        colNOM.setCellValueFactory(new PropertyValueFactory<Responsable, String>("nom"));
+
+    } */
     public void remplir(){
         String sql = "SELECT * FROM service_responsable";
         try {

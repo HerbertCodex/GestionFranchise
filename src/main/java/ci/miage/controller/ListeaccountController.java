@@ -22,8 +22,8 @@ public class ListeaccountController implements Initializable {
     public PreparedStatement preparedStatement; //st
     public ResultSet resultSet; //result
 
-    @FXML
-    private TableColumn<?, ?> colAction;
+    //@FXML
+    //private TableColumn<Responsable, String> colAction;
     @FXML
     private TableView<Responsable> tableAccount;
 
@@ -45,6 +45,7 @@ public class ListeaccountController implements Initializable {
     @FXML
     private TableColumn<Responsable, String> colTelephone;
     public ObservableList<Responsable> data = FXCollections.observableArrayList();
+
     public void showResponsable(){
         String sql = "SELECT * FROM responsable";
         try{
@@ -58,20 +59,19 @@ public class ListeaccountController implements Initializable {
                 responsable.setAdresse(resultSet.getString("adresse"));
                 responsable.setTelephone(resultSet.getString("telephone"));
                 responsable.setService(resultSet.getString("service"));
-
-
                 data.add(responsable);
             }
-            colNom.setCellValueFactory(new PropertyValueFactory<Responsable,String>("nom"));
-            colPrenom.setCellValueFactory(new PropertyValueFactory<Responsable,String>("prenom"));
-            colEmail.setCellValueFactory(new PropertyValueFactory<Responsable,String>("email"));
-            colAdresse.setCellValueFactory(new PropertyValueFactory<Responsable,String>("adresse"));
-            colTelephone.setCellValueFactory(new PropertyValueFactory<Responsable,String>("telephone"));
-            colService.setCellValueFactory(new PropertyValueFactory<Responsable,String>("service"));
-            tableAccount.setItems(data);
+
         }catch (SQLException e){
             e.printStackTrace();
         }
+        colNom.setCellValueFactory(new PropertyValueFactory<Responsable,String>("nom"));
+        colPrenom.setCellValueFactory(new PropertyValueFactory<Responsable,String>("prenom"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<Responsable,String>("email"));
+        colAdresse.setCellValueFactory(new PropertyValueFactory<Responsable,String>("adresse"));
+        colTelephone.setCellValueFactory(new PropertyValueFactory<Responsable,String>("telephone"));
+        colService.setCellValueFactory(new PropertyValueFactory<Responsable,String>("service"));
+        tableAccount.setItems(data);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

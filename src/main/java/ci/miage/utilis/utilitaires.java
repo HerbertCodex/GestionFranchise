@@ -6,4 +6,7 @@ public class utilitaires {
     public static String urladminscreen = "/ci/miage/vue/adminscreen.fxml";
     public static String urllisteaccountscreen = "/ci/miage/vue/listeaccountscreen.fxml";
     public static String urlloginAdminscreen = "/ci/miage/vue/loginAdminscreen.fxml";
+    public static String urlAdministratifscreen = "/ci/miage/vue/administratifScreen.fxml";
+    public static String urlcommercialscreen = "/ci/miage/vue/commercialScreen.fxml";
+    public static String urlfinancescreen = "/ci/miage/vue/financeScreen.fxml";
 }
