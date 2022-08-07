@@ -9,4 +9,5 @@ public class utilitaires {
     public static String urlAdministratifscreen = "/ci/miage/vue/administratifScreen.fxml";
     public static String urlcommercialscreen = "/ci/miage/vue/commercialScreen.fxml";
     public static String urlfinancescreen = "/ci/miage/vue/financeScreen.fxml";
+    public static String urllistefranchisescreen = "/ci/miage/vue/listeFranchiseScreen.fxml";
 }

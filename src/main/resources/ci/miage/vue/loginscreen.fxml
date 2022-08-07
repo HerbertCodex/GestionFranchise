@@ -18,8 +18,8 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <MFXTextField fx:id="champ_email" floatMode="BORDER" layoutX="209.0" layoutY="273.0" prefHeight="50.0" prefWidth="331.0" promptText="email" style="-fx-border-color: #3786bd;" text="krakoffi57@gmail.co" />
-            <MFXPasswordField fx:id="champ_password" floatMode="BORDER" layoutX="209.0" layoutY="349.0" prefHeight="50.0" prefWidth="331.0" promptText="mot de passe" style="-fx-border-color: #3786bd;" text="123" />
+            <MFXTextField fx:id="champ_email" floatMode="BORDER" layoutX="209.0" layoutY="273.0" prefHeight="50.0" prefWidth="331.0" promptText="email" style="-fx-border-color: #3786bd;" text="kra@gmail.com" />
+            <MFXPasswordField fx:id="champ_password" floatMode="BORDER" layoutX="209.0" layoutY="349.0" prefHeight="50.0" prefWidth="331.0" promptText="mot de passe" style="-fx-border-color: #3786bd;" text="1234" />
             <MFXButton fx:id="btnconnexion" buttonType="RAISED" layoutX="210.0" layoutY="517.0" onAction="#connexion" prefHeight="50.0" prefWidth="331.0" rippleColor="WHITE" style="-fx-background-color: #3786bd;" text="CONNEXION" textFill="WHITE">
                <font>
                   <Font size="20.0" />
