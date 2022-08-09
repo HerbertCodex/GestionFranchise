@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="Connexion Responsable&#10;02/08/2022">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/pngegg (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/pngegg.png" afterDir="false" />
+    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="Interface Administratif&#10;07/08/2022">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Franchise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/verifie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1df96615-f663-4797-a614-6db5ce185e44.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1df96615-f663-4797-a614-6db5ce185e44.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdministratifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdministratifController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/utilis/utilitaires.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/utilis/utilitaires.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/administratifScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/administratifScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,9 +64,9 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/hduser/Documents/projet/mysql-connector-java-8.0.29.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hduser/Documents/projet/GestionFranchise/src/main/resources/libaries_icons/fontawesomefx-glyphsbrowser-all-1.0.jar&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
@@ -82,11 +82,11 @@
       <recent name="ci.miage.gestionfranchises" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue" />
+      <recent name="$PROJECT_DIR$/src/main/resources/images" />
       <recent name="$PROJECT_DIR$/src/main/java/ci/miage/controller" />
+      <recent name="$PROJECT_DIR$/src/main/java/ci/miage/modele" />
+      <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue/css" />
-      <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue/ci.miage.css" />
     </key>
   </component>
   <component name="RunManager">
@@ -144,6 +144,9 @@
       <workItem from="1659412727865" duration="9687000" />
       <workItem from="1659626123188" duration="6664000" />
       <workItem from="1659716983634" duration="379000" />
+      <workItem from="1659867928075" duration="12826000" />
+      <workItem from="1659910999915" duration="7431000" />
+      <workItem from="1660035444603" duration="7940000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1657900866982</created>
@@ -194,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659422568453</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Interface Administratif&#10;07/08/2022">
+      <created>1659868157471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659868157471</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Interface Administratif&#10;07/08/2022">
+      <created>1659868173698</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659868173698</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +237,9 @@
     <MESSAGE value="connection administrateur gerer&#10;27/07/2022" />
     <MESSAGE value="affichage des comptes responsable&#10;30/07/2022" />
     <MESSAGE value="Connexion Responsable&#10;02/08/2022" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connexion Responsable&#10;02/08/2022" />
+    <MESSAGE value="Interface Administratif&#10;02/08/2022" />
+    <MESSAGE value="Interface Administratif&#10;07/08/2022" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interface Administratif&#10;07/08/2022" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -228,6 +247,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="3" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

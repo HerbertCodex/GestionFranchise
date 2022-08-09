@@ -57,7 +57,7 @@ public class LoginController implements Initializable {
 
             resultSet = preparedStatement.executeQuery();
             if (resultSet.next()){
-                Alert alert = new Alert(Alert.AlertType.ERROR,"email ou mot de passe correct !", ButtonType.OK);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION,"Informations correctes !", ButtonType.OK);
                 alert.showAndWait();
                 btnconnexion.getScene().getWindow().hide();
                 Stage stageL = new Stage();

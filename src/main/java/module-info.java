@@ -12,7 +12,6 @@ module ci.miage {
     requires MaterialFX;
     requires java.sql;
     requires mysql.connector.java;
-
     opens ci.miage.vue to javafx.fxml;
     opens ci.miage.controller to javafx.fxml;
     exports ci.miage;
