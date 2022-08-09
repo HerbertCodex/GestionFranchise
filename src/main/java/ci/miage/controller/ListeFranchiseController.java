@@ -13,11 +13,8 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.util.Callback;
-import org.controlsfx.glyphfont.FontAwesome;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -78,39 +75,40 @@ public class ListeFranchiseController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        colNom.setCellValueFactory(new PropertyValueFactory<Franchise, String>("nom"));
-        colPrenom.setCellValueFactory(new PropertyValueFactory<Franchise, String>("prenom"));
-        colCommune.setCellValueFactory(new PropertyValueFactory<Franchise, String>("commune"));
-        colNomDemande.setCellValueFactory(new PropertyValueFactory<Franchise, String>("nomDemande"));
-        colPiece.setCellValueFactory(new PropertyValueFactory<Franchise, String>("piece"));
+        colNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colPrenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
+        colCommune.setCellValueFactory(new PropertyValueFactory<>("commune"));
+        colNomDemande.setCellValueFactory(new PropertyValueFactory<>("nomDemande"));
+        colPiece.setCellValueFactory(new PropertyValueFactory<>("piece"));
         tableFranchise.setItems(data);
     }
 
     private void addButton(){
-        Callback<TableColumn<Franchise, Void>, TableCell<Franchise, Void>> cellFactory = new Callback<TableColumn<Franchise, Void>, TableCell<Franchise, Void>>() {
+        Callback<TableColumn<Franchise, Void>, TableCell<Franchise, Void>> cellFactory = new Callback<>() {
             @Override
             public TableCell<Franchise, Void> call(final TableColumn<Franchise, Void> param) {
-                final TableCell<Franchise, Void> cell = new TableCell<Franchise, Void>() {
-                   private Button btn = new Button("Accepter");
-                   private Button btn1 = new Button("Refuser");
+                final TableCell<Franchise, Void> cell = new TableCell<>() {
+                    private Button btn = new Button("Accepter");
+                    private Button btn1 = new Button("Refuser");
+
                     {
                         btn1.setStyle(
-                                        "-fx-background-color:" +
-                                                "        #090a0c," +
-                                                "        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%)," +
-                                                "        linear-gradient(#ff5400, #be1d00)," +
-                                                "        radial-gradient(center 50% 0%, radius 100%, rgba(223,27,27), rgba(255,255,255,0));" +
-                                                "    -fx-background-radius: 5,4,3,5;" +
-                                                "    -fx-background-insets: 0,1,2,0;" +
-                                                "    -fx-text-fill: white;" +
-                                                "    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" +
-                                                "    -fx-font-family: \"Arial\";" +
-                                                "    -fx-text-fill: linear-gradient(white, #d0d0d0);" +
-                                                "-fx-font-weight:bold;"+
-                                                "    -fx-font-size: 12px;" +
-                                                "    -fx-padding: 10 20 10 20;"+" -fx-cursor: hand ;"
+                                "-fx-background-color:" +
+                                        "        #090a0c," +
+                                        "        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%)," +
+                                        "        linear-gradient(#ff5400, #be1d00)," +
+                                        "        radial-gradient(center 50% 0%, radius 100%, rgba(223,27,27), rgba(255,255,255,0));" +
+                                        "    -fx-background-radius: 5,4,3,5;" +
+                                        "    -fx-background-insets: 0,1,2,0;" +
+                                        "    -fx-text-fill: white;" +
+                                        "    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" +
+                                        "    -fx-font-family: \"Arial\";" +
+                                        "    -fx-text-fill: linear-gradient(white, #d0d0d0);" +
+                                        "-fx-font-weight:bold;" +
+                                        "    -fx-font-size: 12px;" +
+                                        "    -fx-padding: 10 20 10 20;" + " -fx-cursor: hand ;"
                         );
-                        btn1.setOnAction((ActionEvent e) ->{
+                        btn1.setOnAction((ActionEvent e) -> {
                             System.out.println("btn 1");
                         });
                         btn.setStyle(
@@ -125,10 +123,10 @@ public class ListeFranchiseController implements Initializable {
                                         "    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" +
                                         "    -fx-font-family: \"Arial\";" +
                                         "    -fx-text-fill: linear-gradient(white, #d0d0d0);" +
-                                        "-fx-font-weight:bold;"+
+                                        "-fx-font-weight:bold;" +
                                         "    -fx-font-size: 12px;" +
                                         "    -fx-padding: 10 20 10 20;" +
-                                        "    -fx-padding: 10 20 10 20;"+" -fx-cursor: hand ;"
+                                        "    -fx-padding: 10 20 10 20;" + " -fx-cursor: hand ;"
                         );
                         btn.setOnAction((ActionEvent event) -> {
                             System.out.println("print");

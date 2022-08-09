@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="Interface Administratif&#10;07/08/2022">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Franchise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/verifie.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1df96615-f663-4797-a614-6db5ce185e44.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1df96615-f663-4797-a614-6db5ce185e44.xml" afterDir="false" />
+    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeaccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeaccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Franchise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Franchise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Responsable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Responsable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +144,7 @@
       <workItem from="1659867928075" duration="12826000" />
       <workItem from="1659910999915" duration="7431000" />
       <workItem from="1660035444603" duration="7940000" />
+      <workItem from="1660043858922" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1657900866982</created>
@@ -211,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659868173698</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022">
+      <created>1660043972871</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660043972871</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +244,8 @@
     <MESSAGE value="Connexion Responsable&#10;02/08/2022" />
     <MESSAGE value="Interface Administratif&#10;02/08/2022" />
     <MESSAGE value="Interface Administratif&#10;07/08/2022" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interface Administratif&#10;07/08/2022" />
+    <MESSAGE value="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

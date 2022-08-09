@@ -104,13 +104,13 @@ public class ItemsController implements Initializable {
         }catch (SQLException e){
             e.printStackTrace();
         }
-        colID.setCellValueFactory(new PropertyValueFactory<Responsable,Integer>("idR"));
-        colNOM.setCellValueFactory(new PropertyValueFactory<Responsable, String>("nom"));
-        colPRENOM.setCellValueFactory(new PropertyValueFactory<Responsable, String>("prenom"));
-        colEMAIL.setCellValueFactory(new PropertyValueFactory<Responsable, String>("email"));
-        colADRESSE.setCellValueFactory(new PropertyValueFactory<Responsable, String>("adresse"));
-        colTELEPHONE.setCellValueFactory(new PropertyValueFactory<Responsable, String>("telephone"));
-        colSERVICE.setCellValueFactory(new PropertyValueFactory<Responsable, String>("service"));
+        colID.setCellValueFactory(new PropertyValueFactory<>("idR"));
+        colNOM.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colPRENOM.setCellValueFactory(new PropertyValueFactory<>("prenom"));
+        colEMAIL.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colADRESSE.setCellValueFactory(new PropertyValueFactory<>("adresse"));
+        colTELEPHONE.setCellValueFactory(new PropertyValueFactory<>("telephone"));
+        colSERVICE.setCellValueFactory(new PropertyValueFactory<>("service"));
         tableAccountMod.setItems(datatest);
     }
 
@@ -177,7 +177,7 @@ public class ItemsController implements Initializable {
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-                String libelle = resultSet.getString("libelle").toString();
+                String libelle = resultSet.getString("libelle");
                 data.add(libelle);
                 btnservice.setItems(data);
             }

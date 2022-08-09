@@ -1,7 +1,5 @@
 package ci.miage.modele;
 
-import io.github.palexdev.materialfx.controls.MFXButton;
-
 import java.awt.*;
 
 public class Responsable {
@@ -15,7 +13,6 @@ public class Responsable {
     private String lieunaissance;
     private String adresse;
     private String service;
-    private Button actiontbn;
 
     public Responsable(){};
 
@@ -29,7 +26,6 @@ public class Responsable {
         this.lieunaissance = lieunaissance;
         this.adresse = adresse;
         this.service = service;
-        Button actiontbn = new Button("text");
     }
 
     public int getIdR() {
@@ -102,13 +98,5 @@ public class Responsable {
 
     public void setService(String service) {
         this.service = service;
-    }
-
-    public Button getActiontbn() {
-        return actiontbn;
-    }
-
-    public void setActiontbn(Button actiontbn) {
-        this.actiontbn = actiontbn;
     }
 }

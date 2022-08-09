@@ -65,12 +65,12 @@ public class ListeaccountController implements Initializable {
         }catch (SQLException e){
             e.printStackTrace();
         }
-        colNom.setCellValueFactory(new PropertyValueFactory<Responsable,String>("nom"));
-        colPrenom.setCellValueFactory(new PropertyValueFactory<Responsable,String>("prenom"));
-        colEmail.setCellValueFactory(new PropertyValueFactory<Responsable,String>("email"));
-        colAdresse.setCellValueFactory(new PropertyValueFactory<Responsable,String>("adresse"));
-        colTelephone.setCellValueFactory(new PropertyValueFactory<Responsable,String>("telephone"));
-        colService.setCellValueFactory(new PropertyValueFactory<Responsable,String>("service"));
+        colNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colPrenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colAdresse.setCellValueFactory(new PropertyValueFactory<>("adresse"));
+        colTelephone.setCellValueFactory(new PropertyValueFactory<>("telephone"));
+        colService.setCellValueFactory(new PropertyValueFactory<>("service"));
         tableAccount.setItems(data);
     }
     @Override
