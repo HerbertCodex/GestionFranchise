@@ -58,7 +58,7 @@ public class ListeFranchiseController implements Initializable {
     }
 
     public void show() {
-        String sql = "select * from administrateurFranchise,commune,demande,piece";
+        String sql = "select b.nom, b.prenom, d.lib_demande, p.lib_piece, C2.nom_commune from AdministrateurFranchise b left join Compte c on b.id_administrateur = c.Administrateur_id_administrateur left join Demande d on c.Demande_id_demande = d.id_demande left join Piece p on d.Piece_id_piece = p.id_piece left join Franchise F on c.Franchise_id_franchise = F.Commune_id_commune left join Commune C2 on F.Commune_id_commune = C2.id_commune";
         try {
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
@@ -66,9 +66,9 @@ public class ListeFranchiseController implements Initializable {
                 Franchise franchise = new Franchise();
                 franchise.setNom(resultSet.getString("nom"));
                 franchise.setPrenom(resultSet.getString("prenom"));
-                franchise.setCommune(resultSet.getString("nomCommune"));
-                franchise.setNomDemande(resultSet.getString("nomDemande"));
-                franchise.setPiece(resultSet.getString("nomPiece"));
+                franchise.setCommune(resultSet.getString("nom_commune"));
+                franchise.setNomDemande(resultSet.getString("lib_demande"));
+                franchise.setPiece(resultSet.getString("lib_piece"));
                 addButton();
                 data.add((franchise));
             }
@@ -88,11 +88,12 @@ public class ListeFranchiseController implements Initializable {
             @Override
             public TableCell<Franchise, Void> call(final TableColumn<Franchise, Void> param) {
                 final TableCell<Franchise, Void> cell = new TableCell<>() {
-                    private Button btn = new Button("Accepter");
-                    private Button btn1 = new Button("Refuser");
+                    private Button btnAccepter = new Button("Accepter");
+                    private Button btnRefuser = new Button("Refuser");
+                    String sql = "INSERT INTO demandeAcceptee (nomDemande, administrateurFranchise, email) SELECT nom, prenom,email FROM administrateurFranchise";
 
                     {
-                        btn1.setStyle(
+                        btnRefuser.setStyle(
                                 "-fx-background-color:" +
                                         "        #090a0c," +
                                         "        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%)," +
@@ -108,10 +109,7 @@ public class ListeFranchiseController implements Initializable {
                                         "    -fx-font-size: 12px;" +
                                         "    -fx-padding: 10 20 10 20;" + " -fx-cursor: hand ;"
                         );
-                        btn1.setOnAction((ActionEvent e) -> {
-                            System.out.println("btn 1");
-                        });
-                        btn.setStyle(
+                        btnAccepter.setStyle(
                                 "-fx-background-color:" +
                                         "        #090a0c," +
                                         "        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%)," +
@@ -128,8 +126,14 @@ public class ListeFranchiseController implements Initializable {
                                         "    -fx-padding: 10 20 10 20;" +
                                         "    -fx-padding: 10 20 10 20;" + " -fx-cursor: hand ;"
                         );
-                        btn.setOnAction((ActionEvent event) -> {
-                            System.out.println("print");
+
+                        //Action
+                        btnAccepter.setOnAction((ActionEvent event) -> {
+                            System.out.println("tes");
+                        });
+                        /////
+                        btnRefuser.setOnAction((ActionEvent e) -> {
+                            System.out.println("btn 1");
                         });
                     }
 
@@ -140,10 +144,10 @@ public class ListeFranchiseController implements Initializable {
                             setGraphic(null);
                             setText(null);
                         } else {
-                            HBox managebtn = new HBox(btn, btn1);
+                            HBox managebtn = new HBox(btnAccepter, btnRefuser);
                             managebtn.setStyle("-fx-alignment:center");
-                            HBox.setMargin(btn, new Insets(2, 2, 0, 3));
-                            HBox.setMargin(btn1, new Insets(2, 3, 0, 2));
+                            HBox.setMargin(btnAccepter, new Insets(2, 2, 0, 3));
+                            HBox.setMargin(btnRefuser, new Insets(2, 3, 0, 2));
                             setGraphic(managebtn);
 
                         }

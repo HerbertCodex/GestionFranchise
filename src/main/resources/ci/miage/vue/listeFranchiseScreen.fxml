@@ -10,7 +10,7 @@
         <columns>
           <TableColumn fx:id="colNom" minWidth="135.0" prefWidth="75.0" style="-fx-alignment: center;" text="Nom" />
           <TableColumn fx:id="colPrenom" minWidth="135.0" prefWidth="75.0" style="-fx-alignment: center;" text="Prenom" />
-            <TableColumn fx:id="colCommune" minWidth="135.0" prefWidth="121.0" style="-fx-alignment: center;" text="Commune" />
+            <TableColumn fx:id="colCommune" minWidth="135.0" prefWidth="121.0" style="-fx-alignment: center;" text="Localisation" />
             <TableColumn fx:id="colNomDemande" minWidth="135.0" prefWidth="75.0" style="-fx-alignment: center;" text="Nom Demande" />
             <TableColumn fx:id="colPiece" minWidth="135.0" prefWidth="75.0" style="-fx-alignment: center;" text="Piece" />
             <TableColumn fx:id="colAction" minWidth="235.0" prefWidth="75.0" text="Action" />
