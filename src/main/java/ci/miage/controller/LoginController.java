@@ -45,6 +45,8 @@ public class LoginController implements Initializable {
 
     @FXML
     private MFXPasswordField champ_password;
+    public static String loggerUsername = "";
+    public static String loggerAccessLevel = "";
 
     @FXML
     void connexion(ActionEvent event) {
@@ -57,6 +59,8 @@ public class LoginController implements Initializable {
 
             resultSet = preparedStatement.executeQuery();
             if (resultSet.next()){
+                loggerUsername = resultSet.getString("nom");
+                loggerAccessLevel = resultSet.getString("service");
                 Alert alert = new Alert(Alert.AlertType.INFORMATION,"Informations correctes !", ButtonType.OK);
                 alert.showAndWait();
                 btnconnexion.getScene().getWindow().hide();
@@ -69,6 +73,7 @@ public class LoginController implements Initializable {
                         stageL.setResizable(false);
                         stageL.show();
                         stageL.centerOnScreen();
+
                     } else if(btnservice.getSelectedItem().equals("ADMINISTRATIF")){
                         fxml = FXMLLoader.load(getClass().getResource(utilitaires.urlAdministratifscreen));
                         Scene sceneL = new Scene(fxml);

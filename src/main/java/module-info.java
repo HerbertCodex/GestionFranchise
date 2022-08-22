@@ -2,8 +2,11 @@ module ci.miage {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires javafx.base;
+    requires java.base;
 
-    requires org.controlsfx.controls;
+
+    //requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires validatorfx;
     requires org.kordamp.ikonli.javafx;
@@ -12,6 +15,9 @@ module ci.miage {
     requires MaterialFX;
     requires java.sql;
     requires mysql.connector.java;
+    requires javax.mail;
+    requires jfoenix;
+    requires controlsfx;
     opens ci.miage.vue to javafx.fxml;
     opens ci.miage.controller to javafx.fxml;
     exports ci.miage;

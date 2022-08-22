@@ -1,6 +1,8 @@
 package ci.miage.modele;
 
 public class Franchise {
+    private int id;
+    private static int compt;
     private String nom;
     private String prenom;
     private String commune;
@@ -9,12 +11,22 @@ public class Franchise {
 
     public Franchise(){};
     public Franchise(String nom, String prenom, String commune, String nomDemande, String piece) {
+        this.id = compt++;
         this.nom = nom;
         this.prenom = prenom;
         this.commune = commune;
         this.nomDemande = nomDemande;
         this.piece = piece;
 
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNom() {

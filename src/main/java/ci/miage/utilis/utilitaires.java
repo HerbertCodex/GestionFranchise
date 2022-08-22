@@ -10,4 +10,11 @@ public class utilitaires {
     public static String urlcommercialscreen = "/ci/miage/vue/commercialScreen.fxml";
     public static String urlfinancescreen = "/ci/miage/vue/financeScreen.fxml";
     public static String urllistefranchisescreen = "/ci/miage/vue/listeFranchiseScreen.fxml";
+    public static String urllistefranchiscreenacceptee = "/ci/miage/vue/listefranchiscreenacceptee.fxml";
+    public static String urllistefranchiscreenrefusee = "/ci/miage/vue/listefranchiscreenrefusee.fxml";
+    public static String urllistedashboardcommercial = "/ci/miage/vue/daskboardcommercial.fxml";
+    public static String urlajouterarcticle = "/ci/miage/vue/ajouterArcticle.fxml";
+    public static String urllistetoutefranchise = "/ci/miage/vue/listetoutefranchiscreen.fxml";
+    public static String urlfinance = "/ci/miage/vue/dashboardFinance.fxml";
+    public static String urlmodificationScreen = "/ci/miage/vue/modificationScreen.fxml";
 }

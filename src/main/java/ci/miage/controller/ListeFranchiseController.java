@@ -8,11 +8,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.util.Callback;
 
@@ -45,6 +43,8 @@ public class ListeFranchiseController implements Initializable {
 
     @FXML
     private TableColumn<Franchise, String> colPiece;
+    @FXML
+    private TableColumn<Franchise, Integer> colId;
 
     @FXML
     private TableColumn<Franchise, String> colPrenom;
@@ -58,7 +58,8 @@ public class ListeFranchiseController implements Initializable {
     }
 
     public void show() {
-        String sql = "select b.nom, b.prenom, d.lib_demande, p.lib_piece, C2.nom_commune from AdministrateurFranchise b left join Compte c on b.id_administrateur = c.Administrateur_id_administrateur left join Demande d on c.Demande_id_demande = d.id_demande left join Piece p on d.Piece_id_piece = p.id_piece left join Franchise F on c.Franchise_id_franchise = F.Commune_id_commune left join Commune C2 on F.Commune_id_commune = C2.id_commune";
+        //String sql = "select b.id_administrateur, b.nom, b.prenom, d.lib_demande, p.lib_piece, C2.nom_commune from AdministrateurFranchise b left join Compte c on b.id_administrateur = c.Administrateur_id_administrateur left join Demande d on c.Demande_id_demande = d.id_demande left join Piece p on d.Piece_id_piece = p.id_piece left join Franchise F on c.Franchise_id_franchise = F.Commune_id_commune left join Commune C2 on F.Commune_id_commune = C2.id_commune";
+        String sql = "select id_utilisateur, nom,prenom, lieu_implantation,numero_rccm,type_piece from demande_utilisateur";
         try {
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
@@ -66,15 +67,17 @@ public class ListeFranchiseController implements Initializable {
                 Franchise franchise = new Franchise();
                 franchise.setNom(resultSet.getString("nom"));
                 franchise.setPrenom(resultSet.getString("prenom"));
-                franchise.setCommune(resultSet.getString("nom_commune"));
-                franchise.setNomDemande(resultSet.getString("lib_demande"));
-                franchise.setPiece(resultSet.getString("lib_piece"));
+                franchise.setCommune(resultSet.getString("lieu_implantation"));
+                franchise.setNomDemande(resultSet.getString("numero_rccm"));
+                franchise.setPiece(resultSet.getString("type_piece"));
+                franchise.setId((resultSet.getInt("id_utilisateur")));
                 addButton();
                 data.add((franchise));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
         colPrenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
         colCommune.setCellValueFactory(new PropertyValueFactory<>("commune"));
@@ -90,8 +93,7 @@ public class ListeFranchiseController implements Initializable {
                 final TableCell<Franchise, Void> cell = new TableCell<>() {
                     private Button btnAccepter = new Button("Accepter");
                     private Button btnRefuser = new Button("Refuser");
-                    String sql = "INSERT INTO demandeAcceptee (nomDemande, administrateurFranchise, email) SELECT nom, prenom,email FROM administrateurFranchise";
-
+                    public ObservableList<Franchise> data1 = FXCollections.observableArrayList();
                     {
                         btnRefuser.setStyle(
                                 "-fx-background-color:" +
@@ -128,12 +130,58 @@ public class ListeFranchiseController implements Initializable {
                         );
 
                         //Action
-                        btnAccepter.setOnAction((ActionEvent event) -> {
-                            System.out.println("tes");
+                        btnAccepter.setOnMouseClicked((MouseEvent event) -> {
+                            try {
+                                TablePosition selectedCells = tableFranchise.getSelectionModel().getSelectedCells().get(0);
+                                int row = selectedCells.getRow();
+                                Franchise franchise = tableFranchise.getItems().get(row);
+                                TableColumn tableColumn = selectedCells.getTableColumn();
+                                Object data =  tableColumn.getCellObservableValue(franchise).getValue();
+                                System.out.println(data);
+                               try {
+                                   if (btnAccepter.getText().equals("Accepter")){
+                                       String sql1 = "insert into Demande_A  (nom_demande,nom,prenom,date_naissance,lieu_naissance,genre,situation_mat,lieu_hab,pays,email,profession,telephone,piece1,type_piece,piece2,lieu_implantation,numero_rccm,piece3,annee_exp,pass) select nom_demande,nom,prenom,date_naissance,lieu_naissance,genre,situation_mat,lieu_hab,pays,email,profession,telephone,piece1,type_piece,piece2,lieu_implantation,numero_rccm,piece3,annee_exp,pass from demande_utilisateur  where id_utilisateur = " + data;
+                                       String sql2 = "delete from demande_utilisateur where id_utilisateur = " + data;
+                                       preparedStatement = connection.prepareStatement(sql1);
+                                       PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
+                                       preparedStatement.executeUpdate();
+                                       preparedStatement2.executeUpdate();
+                                       System.out.println("test");
+
+                                   }
+                               } catch (Exception e){
+                                   e.printStackTrace();
+                               }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
                         });
                         /////
                         btnRefuser.setOnAction((ActionEvent e) -> {
-                            System.out.println("btn 1");
+                            try {
+                                TablePosition selectedCells = tableFranchise.getSelectionModel().getSelectedCells().get(0);
+                                int row = selectedCells.getRow();
+                                Franchise franchise = tableFranchise.getItems().get(row);
+                                TableColumn tableColumn = selectedCells.getTableColumn();
+                                Object data =  tableColumn.getCellObservableValue(franchise).getValue();
+                                System.out.println(data);
+                                try {
+                                    if (btnRefuser.getText().equals("Refuser")){
+                                        String sql1 = "insert into Demande_R  (nom_demande,nom,prenom,date_naissance,lieu_naissance,genre,situation_mat,lieu_hab,pays,email,profession,telephone,piece1,type_piece,piece2,lieu_implantation,numero_rccm,piece3,annee_exp,pass) select nom_demande,nom,prenom,date_naissance,lieu_naissance,genre,situation_mat,lieu_hab,pays,email,profession,telephone,piece1,type_piece,piece2,lieu_implantation,numero_rccm,piece3,annee_exp,pass from demande_utilisateur  where id_utilisateur = " + data;
+                                        String sql2 = "delete from demande_utilisateur where id_utilisateur = " + data;
+                                        preparedStatement = connection.prepareStatement(sql1);
+                                        PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
+                                        preparedStatement.executeUpdate();
+                                        preparedStatement2.executeUpdate();
+                                        System.out.println("Refuser");
+                                    }
+                                } catch (Exception ex){
+                                    ex.printStackTrace();
+                                }
+                            } catch (Exception ex) {
+                                ex.printStackTrace();
+                            }
                         });
                     }
 
@@ -149,7 +197,6 @@ public class ListeFranchiseController implements Initializable {
                             HBox.setMargin(btnAccepter, new Insets(2, 2, 0, 3));
                             HBox.setMargin(btnRefuser, new Insets(2, 3, 0, 2));
                             setGraphic(managebtn);
-
                         }
                     }
                 };
@@ -158,5 +205,5 @@ public class ListeFranchiseController implements Initializable {
         };
         colAction.setCellFactory(cellFactory);
     }
+    }
 
-}

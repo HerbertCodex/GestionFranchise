@@ -2,20 +2,16 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXComboBox?>
-<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
 <?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="545.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.ItemsController">
+<AnchorPane prefHeight="340.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.ItemsController">
    <children>
       <Pane prefHeight="50.0" prefWidth="800.0" style="-fx-border-color: #3786bd;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -57,11 +53,11 @@
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
             </MFXTextField>
-            <MFXDatePicker fx:id="btndatenaissance" floatMode="BORDER" promptText="Date Naissance" style="-fx-border-color: #3786bd;">
+            <MFXTextField floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="genre" style="-fx-border-color: #3786bd;">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" top="5.0" />
                </HBox.margin>
-            </MFXDatePicker>
+            </MFXTextField>
          </children>
       </HBox>
       <HBox layoutY="200.0" prefHeight="50.0" prefWidth="800.0">
@@ -83,17 +79,17 @@
             </MFXTextField>
          </children>
       </HBox>
-      <MFXButton fx:id="btnvalide" buttonType="RAISED" layoutX="185.0" layoutY="278.0" onMouseClicked="#valide" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE">
+      <MFXButton fx:id="btnvalide" buttonType="RAISED" layoutX="328.0" layoutY="273.0" onMouseClicked="#valide" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: green;" text="Ajouter" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </MFXButton>
-      <MFXButton fx:id="btnmodifier" buttonType="RAISED" layoutX="481.0" layoutY="278.0" onMouseClicked="#modification" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE">
+    <!--  <MFXButton fx:id="btnmodifier" buttonType="RAISED" layoutX="481.0" layoutY="278.0" onMouseClicked="#modification" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: blue;" text="Modifier" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
-      </MFXButton>
-      <AnchorPane layoutX="14.0" layoutY="335.0" prefHeight="200.0" prefWidth="770.0">
+      </MFXButton> -->
+     <!-- <AnchorPane layoutX="14.0" layoutY="335.0" prefHeight="200.0" prefWidth="770.0">
          <children>
             <TableView fx:id="tableAccountMod" prefHeight="200.0" prefWidth="770.0">
               <columns>
@@ -107,9 +103,6 @@
               </columns>
             </TableView>
          </children>
-      </AnchorPane>
+      </AnchorPane> -->
    </children>
-   <effect>
-      <DropShadow height="5.0" radius="2.0" width="5.0" />
-   </effect>
 </AnchorPane>

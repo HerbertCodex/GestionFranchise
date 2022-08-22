@@ -83,7 +83,7 @@ public class ItemsController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         connection = ConnectionMysql.connectionDB();
         remplir();
-        show();
+        //show();
     }
     public void show(){
         String sql = "select * from responsable";

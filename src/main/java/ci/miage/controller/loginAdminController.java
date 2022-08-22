@@ -5,6 +5,7 @@ import ci.miage.utilis.utilitaires;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import io.github.palexdev.materialfx.controls.MFXTextField;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,6 +23,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class loginAdminController implements Initializable {
@@ -41,6 +43,8 @@ public class loginAdminController implements Initializable {
     private Parent fxml;
     @FXML
     private AnchorPane adminpane;
+    @FXML
+    private MFXButton btnResponsable;
 
     @FXML
     void openHome(MouseEvent event) {
@@ -72,6 +76,21 @@ public class loginAdminController implements Initializable {
         } catch (SQLException e){
             e.printStackTrace();
         }
+    }
+
+
+    @FXML
+    void openResponsableScreen(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btnResponsable.getScene().getWindow();
+        stage.close();
+        Stage adminStage = new Stage();
+        fxml = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(utilitaires.urlloginscreen)));
+        adminStage.setResizable(false);
+        Scene adminScenne = new Scene(fxml);
+        adminStage.setScene(adminScenne);
+        adminStage.setTitle("LoginAdmin");
+        adminStage.show();
+        adminStage.centerOnScreen();
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

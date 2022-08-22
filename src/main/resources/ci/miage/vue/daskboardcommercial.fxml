@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.dashboardcommercialController">
+   <children>
+      <HBox layoutY="21.0" prefHeight="200.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: orange;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="VENTE DU JOUR" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="70.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="50.0" left="105.0" right="50.0" top="50.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: violet;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="ARCTICLE EN STOCK" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblStock" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="125.0" top="50.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: green;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="TOTAL VENTES" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="80.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblTotalVentes" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="125.0" top="50.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <AnchorPane fx:id="panelGraph" layoutY="221.0" prefHeight="479.0" prefWidth="1173.0">
+         <children>
+            <PieChart fx:id="pieChart" layoutX="6.0" layoutY="40.0" />
+            <LineChart fx:id="lineChart" layoutX="506.0" layoutY="40.0" legendSide="TOP" prefHeight="400.0" prefWidth="660.0" title=" Vente par Jour">
+              <xAxis>
+                <CategoryAxis fx:id="dateAxis" label="Date du jour" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="amountAxis" label="Vente du jour" side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

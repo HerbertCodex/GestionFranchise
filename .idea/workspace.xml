@@ -4,10 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1df96615-f663-4797-a614-6db5ce185e44.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1df96615-f663-4797-a614-6db5ce185e44.xml" afterDir="false" />
+    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="Correction de la requete sql de la classe ListeFranchiseController&#10;11/08/2022">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AjouterArcticleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/DashboardFinance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeTouteFranchise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListefranchiseControllerAcceptee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListefranchiseControllerRefusee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ModificationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/dashboardcommercialController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/FranchiseAcceptee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/FranchiseRefusee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/produits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/ajouterArcticle.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/dashboardFinance.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/daskboardcommercial.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listefranchiscreenacceptee.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listefranchiscreenrefusee.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listetoutefranchiscreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/modificationScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/backspace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/caisse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checklist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/la-finance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/la-finance1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/poubelle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/revenu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/se-deconnecter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/trolley.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1df96615-f663-4797-a614-6db5ce185e44.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdministratifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdministratifController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/CommercialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/CommercialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/FinanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/FinanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/loginAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/loginAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Franchise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Franchise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/utilis/utilitaires.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/utilis/utilitaires.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/administratifScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/administratifScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/adminscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/adminscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/commercialScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/commercialScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/financeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/financeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/itemsscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/itemsscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeaccountscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeaccountscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginAdminscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginAdminscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginscreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,38 +101,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "/home/hduser/Documents/projet/GestionFranchise/src/main/resources/libaries_icons/fontawesomefx-glyphsbrowser-all-1.0.jar",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hduser/Documents/projet/GestionFranchise/src/main/resources/ci/miage/vue&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "MySQL",
-      "Oracle"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;,
+      &quot;Oracle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ci.miage.gestionfranchises" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue" />
+      <recent name="$PROJECT_DIR$/src/main/java/ci/miage/modele" />
+      <recent name="$PROJECT_DIR$/src/main/java/ci/miage/controller" />
+      <recent name="$PROJECT_DIR$/src/main/resources/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/images" />
@@ -86,9 +147,15 @@
       <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ci.miage.controller" />
+      <recent name="ci.miage.modele" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="GestionFranchise" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="ci.miage.main" />
       <module name="GestionFranchise" />
       <method v="2">
@@ -148,7 +215,19 @@
       <workItem from="1660043858922" duration="1138000" />
       <workItem from="1660050908231" duration="163000" />
       <workItem from="1660123529195" duration="1848000" />
-      <workItem from="1660208711091" duration="10177000" />
+      <workItem from="1660208711091" duration="27395000" />
+      <workItem from="1660279074991" duration="19178000" />
+      <workItem from="1660409964193" duration="10183000" />
+      <workItem from="1660517695763" duration="20210000" />
+      <workItem from="1660549362740" duration="13000" />
+      <workItem from="1660551216652" duration="6747000" />
+      <workItem from="1660558004395" duration="65774000" />
+      <workItem from="1660733270121" duration="3487000" />
+      <workItem from="1660770908483" duration="4587000" />
+      <workItem from="1660779764899" duration="26727000" />
+      <workItem from="1660834620504" duration="12139000" />
+      <workItem from="1660980321380" duration="609000" />
+      <workItem from="1660980978264" duration="276000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1657900866982</created>
@@ -227,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660044655612</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Correction de la requete sql de la classe ListeFranchiseController&#10;11/08/2022">
+      <created>1660220453672</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660220453672</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +342,8 @@
     <MESSAGE value="Interface Administratif&#10;02/08/2022" />
     <MESSAGE value="Interface Administratif&#10;07/08/2022" />
     <MESSAGE value="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022" />
+    <MESSAGE value="Correction de la requete sql de la classe ListeFranchiseController&#10;11/08/2022" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction de la requete sql de la classe ListeFranchiseController&#10;11/08/2022" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

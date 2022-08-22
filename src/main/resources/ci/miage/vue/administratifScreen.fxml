@@ -2,7 +2,9 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.AdministratifController">
+<AnchorPane fx:id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.AdministratifController">
    <children>
       <Pane prefHeight="150.0" prefWidth="1300.0" style="-fx-background-color: #3786bd;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -66,6 +68,9 @@
                <padding>
                   <Insets left="50.0" />
                </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </MFXButton>
             <MFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onMouseClicked="#franchiseA" prefHeight="50.0" prefWidth="288.0" text="FRANCHISES ACCEPTEES">
                <VBox.margin>
@@ -81,6 +86,9 @@
                <padding>
                   <Insets left="50.0" />
                </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </MFXButton>
             <MFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onMouseClicked="#franchiseR" prefHeight="50.0" prefWidth="288.0" text="FRANCHISES REFUSEES">
                <graphic>
@@ -93,12 +101,73 @@
                <padding>
                   <Insets left="50.0" />
                </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </MFXButton>
             <Label prefHeight="50.0" prefWidth="288.0" text="ENTREPRISE">
                <padding>
                   <Insets left="50.0" />
                </padding>
             </Label>
+            <MFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onMouseClicked="#ListeFranchises" prefHeight="50.0" prefWidth="288.0" text="LISTE DE TOUTES LES FRANCHISES">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/ajouter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXButton>
+           <!--Heure et deconnexion -->
+            <AnchorPane prefHeight="144.0" prefWidth="288.0" style="-fx-background-color: #3786bd;">
+               <children>
+                  <Label fx:id="lblHeure" alignment="CENTER_RIGHT" layoutX="83.0" layoutY="14.0" text="Heure" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <MFXButton fx:id="btnDeconnexion" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="82.0" onAction="#deconnexion" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/se-deconnecter.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Cliquez ici pour vous déconnecter" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+                  <Label fx:id="lblUsername" layoutX="169.0" layoutY="56.0" text="username" textFill="WHITE">
+                     <font>
+                        <Font name="Comfortaa SemiBold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="57.0" layoutY="57.0" text="Utilisateur:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <!--Heure et deconnexion -->
          </children>
       </VBox>
       <AnchorPane fx:id="pnl" layoutX="288.0" layoutY="220.0" prefHeight="575.0" prefWidth="1009.0" />

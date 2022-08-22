@@ -1,16 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.FinanceController">
+<AnchorPane fx:id="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.FinanceController">
    <children>
-      <Label layoutX="234.0" layoutY="182.0" text="FINANCE">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
+      <Pane prefHeight="150.0" prefWidth="1300.0" style="-fx-background-color: #3786bd;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="212.0" layoutY="75.0" text="SERVICE FINANCE" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="211.0" layoutY="111.0" text="Depuis 2022" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="50.0" layoutY="70.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="135.0" fitWidth="150.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/la-finance.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </Pane>
+      <VBox layoutY="150.0" prefHeight="651.0" prefWidth="288.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="225.0">
+         <children>
+            <Label prefHeight="50.0" prefWidth="288.0" text="INVENTAIRE PRODUITS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Label>
+            <MFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onMouseClicked="#dashboard" prefHeight="50.0" prefWidth="288.0" text="Dashboard">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </MFXButton>
+            <MFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onMouseClicked="#caisse" prefHeight="50.0" prefWidth="288.0" text="Caisse">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/caisse.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </MFXButton>
+            <AnchorPane prefHeight="144.0" prefWidth="288.0" style="-fx-background-color: #3786bd;">
+               <children>
+                  <Label fx:id="lblHeure" alignment="CENTER_RIGHT" layoutX="83.0" layoutY="14.0" text="Heure" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <MFXButton fx:id="btnDeconnexion" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="82.0" onAction="#deconnexion" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/se-deconnecter.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Cliquez ici pour vous déconnecter" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MFXButton>
+                  <Label fx:id="lblUsername" layoutX="169.0" layoutY="56.0" text="username" textFill="WHITE">
+                     <font>
+                        <Font name="Comfortaa SemiBold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="57.0" layoutY="57.0" text="Utilisateur:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets top="380.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="pnl" layoutX="288.0" layoutY="233.0" prefHeight="575.0" prefWidth="1009.0" />
    </children>
 </AnchorPane>
