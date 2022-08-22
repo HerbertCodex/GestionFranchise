@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1500.0" style="-fx-background-color: #e4e4e4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.AjouterArcticleController">
+   <children>
+      <VBox prefHeight="680.0" prefWidth="500.0" style="-fx-background-color: #e4e4e4;">
+         <children>
+            <MFXTextField fx:id="colNomProduit" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="nom produit" style="-fx-border-color: #3786bd;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="150.0" top="50.0" />
+               </VBox.margin>
+            </MFXTextField>
+            <MFXComboBox fx:id="colCategorieProduit" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="Catergorie Produit" style="-fx-border-color: #3786bd;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="150.0" />
+               </VBox.margin>
+            </MFXComboBox>
+            <MFXTextField fx:id="colPrixAchat" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="prix achat" style="-fx-border-color: #3786bd;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="150.0" />
+               </VBox.margin>
+            </MFXTextField>
+            <MFXTextField fx:id="colPrixVente" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="prix vente" style="-fx-border-color: #3786bd;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="150.0" />
+               </VBox.margin>
+            </MFXTextField>
+            <MFXTextField fx:id="colFourniseurProduit" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="fournisseur produit" style="-fx-border-color: #3786bd;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="150.0" />
+               </VBox.margin>
+            </MFXTextField>
+            <MFXTextField fx:id="colQuantiteProduit" floatMode="BORDER" prefHeight="40.0" prefWidth="200.0" promptText="quantité produit" style="-fx-border-color: #3786bd;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="150.0" />
+               </VBox.margin>
+            </MFXTextField>
+            <TextArea fx:id="colDescriptionProduit" prefHeight="97.0" prefWidth="383.0" promptText="Description produit" style="-fx-border-color: #3786bd;">
+               <VBox.margin>
+                  <Insets left="150.0" right="150.0" />
+               </VBox.margin>
+            </TextArea>
+            <MFXButton buttonType="RAISED" onMouseClicked="#AjouterProduit" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3786bd;" text="Ajouter" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="150.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Comfortaa Regular" size="20.0" />
+               </font>
+            </MFXButton>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN">
+               <color>
+                  <Color red="0.7882353067398071" green="0.7882353067398071" blue="0.7882353067398071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </VBox>
+      <TableView fx:id="tableProduit" editable="true" layoutX="500.0" prefHeight="680.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn fx:id="tbColIdProduit" minWidth="50.0" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tbColNomProduit" minWidth="155.0" prefWidth="75.0" text="Nom Produit" />
+            <TableColumn fx:id="tbColCategorieProduit" minWidth="155.0" prefWidth="75.0" text="Categorie Produit" />
+            <TableColumn fx:id="tbColPrixAchatProduit" minWidth="155.0" prefWidth="75.0" text="Prix Achat" />
+            <TableColumn fx:id="tbColPrixVenteProduit" minWidth="155.0" prefWidth="75.0" text="Prix Vente" />
+            <TableColumn fx:id="tbColFournisseur" minWidth="155.0" prefWidth="75.0" text="Fournisseur" />
+            <TableColumn fx:id="tbColQuantiteProduit" minWidth="155.0" prefWidth="75.0" text="Quantité" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

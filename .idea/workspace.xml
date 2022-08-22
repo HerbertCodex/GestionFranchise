@@ -4,16 +4,164 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="" />
+    <list default="true" id="4491bfaf-c056-404f-90ad-f43352731d15" name="Changes" comment="Correction de la requete sql de la classe ListeFranchiseController&#10;11/08/2022">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AjouterArcticleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/DashboardFinance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeTouteFranchise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListefranchiseControllerAcceptee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListefranchiseControllerRefusee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ModificationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/dashboardcommercialController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/FranchiseAcceptee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/FranchiseRefusee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/produits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/ajouterArcticle.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/dashboardFinance.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/daskboardcommercial.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listefranchiscreenacceptee.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listefranchiscreenrefusee.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listetoutefranchiscreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/modificationScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/backspace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/caisse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/checklist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/la-finance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/la-finance1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/poubelle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/revenu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/save.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/se-deconnecter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/trolley.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1df96615-f663-4797-a614-6db5ce185e44.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdministratifController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/AdministratifController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/CommercialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/CommercialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/FinanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/FinanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ItemsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/ListeFranchiseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/controller/loginAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/controller/loginAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Franchise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/modele/Franchise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ci/miage/utilis/utilitaires.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ci/miage/utilis/utilitaires.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/administratifScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/administratifScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/adminscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/adminscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/commercialScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/commercialScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/financeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/financeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/itemsscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/itemsscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeFranchiseScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeaccountscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/listeaccountscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginAdminscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginAdminscreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginscreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ci/miage/vue/loginscreen.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="HerbertCodex &lt;krakoffi57@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ByozLG5BmeT56jl9zCDuIX5IcB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hduser/Documents/projet/GestionFranchise/src/main/resources/ci/miage/vue&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;,
+      &quot;Oracle&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ci.miage.gestionfranchises" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue" />
+      <recent name="$PROJECT_DIR$/src/main/java/ci/miage/modele" />
+      <recent name="$PROJECT_DIR$/src/main/java/ci/miage/controller" />
+      <recent name="$PROJECT_DIR$/src/main/resources/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/images" />
+      <recent name="$PROJECT_DIR$/src/main/java/ci/miage/controller" />
+      <recent name="$PROJECT_DIR$/src/main/java/ci/miage/modele" />
+      <recent name="$PROJECT_DIR$/src/main/resources/ci/miage/vue" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ci.miage.controller" />
+      <recent name="ci.miage.modele" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="GestionFranchise" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ci.miage.main" />
+      <module name="GestionFranchise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -24,7 +172,195 @@
       <option name="presentableId" value="Default" />
       <updated>1657887355313</updated>
       <workItem from="1657887357002" duration="6000" />
+      <workItem from="1657887948065" duration="4310000" />
+      <workItem from="1657899424969" duration="1506000" />
+      <workItem from="1657974765848" duration="2967000" />
+      <workItem from="1657988206732" duration="76000" />
+      <workItem from="1657988383720" duration="5495000" />
+      <workItem from="1658060632774" duration="1285000" />
+      <workItem from="1658137160134" duration="6961000" />
+      <workItem from="1658146140007" duration="2326000" />
+      <workItem from="1658148674989" duration="673000" />
+      <workItem from="1658156097244" duration="12743000" />
+      <workItem from="1658175117974" duration="6910000" />
+      <workItem from="1658215994207" duration="850000" />
+      <workItem from="1658216903339" duration="1301000" />
+      <workItem from="1658416684443" duration="401000" />
+      <workItem from="1658417106523" duration="520000" />
+      <workItem from="1658420257309" duration="611000" />
+      <workItem from="1658443061047" duration="151000" />
+      <workItem from="1658481143584" duration="10194000" />
+      <workItem from="1658519898874" duration="5226000" />
+      <workItem from="1658569906468" duration="1059000" />
+      <workItem from="1658602761249" duration="6022000" />
+      <workItem from="1658621298215" duration="30149000" />
+      <workItem from="1658756516993" duration="408000" />
+      <workItem from="1658958189275" duration="819000" />
+      <workItem from="1658970822206" duration="101000" />
+      <workItem from="1658972215283" duration="13437000" />
+      <workItem from="1658996549451" duration="2902000" />
+      <workItem from="1659008452924" duration="600000" />
+      <workItem from="1659074588632" duration="2196000" />
+      <workItem from="1659173793718" duration="5990000" />
+      <workItem from="1659191981727" duration="2183000" />
+      <workItem from="1659194339876" duration="6016000" />
+      <workItem from="1659234039393" duration="1715000" />
+      <workItem from="1659235787896" duration="21083000" />
+      <workItem from="1659412727865" duration="9687000" />
+      <workItem from="1659626123188" duration="6664000" />
+      <workItem from="1659716983634" duration="379000" />
+      <workItem from="1659867928075" duration="12826000" />
+      <workItem from="1659910999915" duration="7431000" />
+      <workItem from="1660035444603" duration="7940000" />
+      <workItem from="1660043858922" duration="1138000" />
+      <workItem from="1660050908231" duration="163000" />
+      <workItem from="1660123529195" duration="1848000" />
+      <workItem from="1660208711091" duration="27395000" />
+      <workItem from="1660279074991" duration="19178000" />
+      <workItem from="1660409964193" duration="10183000" />
+      <workItem from="1660517695763" duration="20210000" />
+      <workItem from="1660549362740" duration="13000" />
+      <workItem from="1660551216652" duration="6747000" />
+      <workItem from="1660558004395" duration="65774000" />
+      <workItem from="1660733270121" duration="3487000" />
+      <workItem from="1660770908483" duration="4587000" />
+      <workItem from="1660779764899" duration="26727000" />
+      <workItem from="1660834620504" duration="12139000" />
+      <workItem from="1660980321380" duration="609000" />
+      <workItem from="1660980978264" duration="276000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1657900866982</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657900866982</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mise en place de l'animation">
+      <created>1658212859014</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658212859014</updated>
+    </task>
+    <task id="LOCAL-00003" summary="correction des fichiers">
+      <created>1658217084739</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658217084739</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ajout de nouveaux fichiers et correction des bugs&#10;27/07/2022">
+      <created>1658681035276</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658681035276</updated>
+    </task>
+    <task id="LOCAL-00005" summary="connection administrateur gerer&#10;27/07/2022">
+      <created>1658687217424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658687217424</updated>
+    </task>
+    <task id="LOCAL-00006" summary="affichage des comptes responsable&#10;30/07/2022">
+      <created>1659200336531</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659200336531</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Connexion Responsable&#10;02/08/2022">
+      <created>1659422568453</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659422568453</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Interface Administratif&#10;07/08/2022">
+      <created>1659868157471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659868157471</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Interface Administratif&#10;07/08/2022">
+      <created>1659868173698</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659868173698</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022">
+      <created>1660043972871</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660043972871</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022">
+      <created>1660044655612</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660044655612</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Correction de la requete sql de la classe ListeFranchiseController&#10;11/08/2022">
+      <created>1660220453672</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660220453672</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="test" />
+    <MESSAGE value="mise en place de l'animation" />
+    <MESSAGE value="correction des fichiers" />
+    <MESSAGE value="ajout de nouveaux fichiers et correction des bugs&#10;27/07/2022" />
+    <MESSAGE value="connection administrateur gerer&#10;27/07/2022" />
+    <MESSAGE value="affichage des comptes responsable&#10;30/07/2022" />
+    <MESSAGE value="Connexion Responsable&#10;02/08/2022" />
+    <MESSAGE value="Interface Administratif&#10;02/08/2022" />
+    <MESSAGE value="Interface Administratif&#10;07/08/2022" />
+    <MESSAGE value="Mise en place des buttons d'action(Juste le graphique)&#10;09/08/2022" />
+    <MESSAGE value="Correction de la requete sql de la classe ListeFranchiseController&#10;11/08/2022" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction de la requete sql de la classe ListeFranchiseController&#10;11/08/2022" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

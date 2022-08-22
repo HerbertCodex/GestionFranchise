@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.LoginController">
+   <children>
+      <Pane layoutX="550.0" prefHeight="800.0" prefWidth="750.0">
+         <children>
+            <Label layoutX="195.0" layoutY="192.0" text="Connexion Responsable" textFill="#3786bd">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="champ_email" floatMode="BORDER" layoutX="209.0" layoutY="273.0" prefHeight="50.0" prefWidth="331.0" promptText="email" style="-fx-border-color: #3786bd;" text="yao@gmail.com" />
+            <MFXPasswordField fx:id="champ_password" floatMode="BORDER" layoutX="209.0" layoutY="349.0" prefHeight="50.0" prefWidth="331.0" promptText="mot de passe" style="-fx-border-color: #3786bd;" text="123" />
+            <MFXButton fx:id="btnconnexion" buttonType="RAISED" layoutX="210.0" layoutY="517.0" onAction="#connexion" prefHeight="50.0" prefWidth="331.0" rippleColor="WHITE" style="-fx-background-color: #3786bd;" text="CONNEXION" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </MFXButton>
+            <MFXComboBox fx:id="btnservice" floatMode="BORDER" layoutX="210.0" layoutY="433.0" prefHeight="40.0" prefWidth="331.0" text="Choisir Type" />
+         </children>
+      </Pane>
+      <Pane prefHeight="800.0" prefWidth="550.0" styleClass="back" stylesheets="@../../../css/style.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="759.0" prefHeight="27.0" prefWidth="289.0" text="Page connexion pour les differents responsable" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="172.0" layoutY="355.0" text="Bienvenue !" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="45.0" />
+               </font>
+            </Label>
+            <MFXButton fx:id="btnadmin" layoutX="422.0" layoutY="757.0" onAction="#openAdminscreen" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #031c6b;" text="ADMIN" textFill="WHITE">
+               <font>
+                  <Font name="Abyssinica SIL" size="13.0" />
+               </font>
+            </MFXButton>
+         </children></Pane>
+   </children>
+</AnchorPane>

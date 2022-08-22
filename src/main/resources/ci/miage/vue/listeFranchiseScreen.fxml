@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ci.miage.controller.ListeFranchiseController">
+   <children>
+      <TableView fx:id="tableFranchise" prefHeight="500.0" prefWidth="1000.0">
+        <columns>
+            <TableColumn fx:id="colId" minWidth="100.0" prefWidth="75.0" style="-fx-alignment: center;" text="ID" />
+          <TableColumn fx:id="colNom" minWidth="135.0" prefWidth="75.0" style="-fx-alignment: center;" text="Nom" />
+          <TableColumn fx:id="colPrenom" minWidth="135.0" prefWidth="75.0" style="-fx-alignment: center;" text="Prenom" />
+            <TableColumn fx:id="colCommune" minWidth="135.0" prefWidth="121.0" style="-fx-alignment: center;" text="Localisation" />
+            <TableColumn fx:id="colNomDemande" minWidth="140.0" prefWidth="75.0" style="-fx-alignment: center;" text="Numero RCCM" />
+            <TableColumn fx:id="colPiece" minWidth="135.0" prefWidth="75.0" style="-fx-alignment: center;" text="Piece" />
+            <TableColumn fx:id="colAction" minWidth="235.0" prefWidth="75.0" text="Action" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
